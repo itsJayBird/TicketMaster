@@ -27,8 +27,8 @@ namespace TicketMaster
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            LoginPage page = new LoginPage();
-            page.NavigationService.Navigate(page);
+            //LoginPage page = new LoginPage();
+            //page.NavigationService.Navigate(page);
         }
     }
 }
