@@ -8,10 +8,13 @@
         Title="MainWindow" Height="450" Width="800"
         MinHeight="450" MinWidth="800"
         WindowStartupLocation="CenterScreen">
-    <Page>
-        <StackPanel>
-            <Button x:Name="btn" Content="to next page" 
-                    Hyperlink.Click="Button_Click"/>
-        </StackPanel>
+    <Page x:Name="Login">
+        
+        <TextBlock Text="Whattup"
+                    FontSize="150"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"/>
+        
     </Page>
+
 </Window>

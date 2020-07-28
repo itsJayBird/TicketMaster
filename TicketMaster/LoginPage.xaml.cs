@@ -24,5 +24,11 @@ namespace TicketMaster
         {
             InitializeComponent();
         }
+
+        private void btn_Click(object sender, RoutedEventArgs e)
+        {
+            HomePage a = new HomePage();
+            this.NavigationService.Navigate(a);
+        }
     }
 }
