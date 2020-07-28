@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:TicketMaster"
         mc:Ignorable="d"
         Title="NavWindow" Height="450" Width="800"
+        x:Name="navWindow"
         Source="LoginPage.xaml" 
         ShowsNavigationUI="False">
 

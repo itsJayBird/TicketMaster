@@ -11,13 +11,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Navigation;
 
 namespace TicketMaster
 {
     /// <summary>
     /// Interaction logic for NavWindow.xaml
     /// </summary>
-    public partial class NavWindow : Window
+    public partial class NavWindow : NavigationWindow
     {
         public NavWindow()
         {
