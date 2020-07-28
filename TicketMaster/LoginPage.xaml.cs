@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace TicketMaster
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoginPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginPage : Page
     {
-        public MainWindow()
+        public LoginPage()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            LoginPage page = new LoginPage();
-            page.NavigationService.Navigate(page);
         }
     }
 }
