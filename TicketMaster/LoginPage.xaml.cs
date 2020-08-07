@@ -30,5 +30,10 @@ namespace TicketMaster
             HomePage a = new HomePage();
             this.NavigationService.Navigate(a);
         }
+
+        private void RouterScripts_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

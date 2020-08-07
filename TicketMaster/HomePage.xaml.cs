@@ -30,7 +30,7 @@ namespace TicketMaster
             MainWindow a = new MainWindow();
             a.Show();
             CommandBinding b = new CommandBinding(ApplicationCommands.Close);
-            b.Command.Execute(this);
+            b.Command.Execute(this.Parent);
         }
 
     }

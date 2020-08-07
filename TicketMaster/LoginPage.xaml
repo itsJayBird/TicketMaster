@@ -8,12 +8,50 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LoginPage"
       ShowsNavigationUI="False"
-      Height="450"
-      Width="800"
       Background="White">
-    <Button x:Name="btn" 
-                Content="to next page"
-                Click="btn_Click"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"/>
+    <DockPanel>
+        <Menu x:Name="ToolBar" 
+              DockPanel.Dock="Top">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <DockPanel HorizontalAlignment="Stretch"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem Header="File"
+                      Name="fileMenu">
+                <MenuItem Header="New Window"
+                          Name="newWindowMenu"/>
+                <MenuItem Header="Open Tickets"
+                          Name="openMenu"/>
+                <Separator/>
+                <MenuItem Header="Exit"
+                          Name="ExitButton"/>
+            </MenuItem>
+            <MenuItem Header="Help"
+                      Name="helpButton"
+                      HorizontalAlignment="Right"/>
+        </Menu>
+        <Grid DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="RouterScripts"
+                    Content="Router Scripts"
+                    Height="125"
+                    Width="250"
+                    Click="btn_Click"/>
+            <Button x:Name="NewTicket"
+                    Content="New Ticket"
+                    Height="125"
+                    Width="250"
+                    Grid.Column="1"/>
+            <Button x:Name="Help"
+                    Content="Support Guide"
+                    Height="125"
+                    Width="250"
+                    Grid.Column="2"/>
+        </Grid>
+    </DockPanel>
 </Page>
