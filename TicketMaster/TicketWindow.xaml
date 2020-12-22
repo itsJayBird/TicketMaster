@@ -1,0 +1,49 @@
+﻿<Page x:Class="TicketMaster.TicketWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TicketMaster"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TicketWindow">
+    <DockPanel Background="White">
+        <!-- Menu Bar -->
+        <Menu x:Name="ToolBar" 
+              DockPanel.Dock="Top">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <DockPanel HorizontalAlignment="Stretch"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem Header="File"
+                      Name="fileMenu">
+                <MenuItem Header="New Window"
+                          Name="newWindowMenu"/>
+                <MenuItem Header="Open Tickets"
+                          Name="openMenu"/>
+                <Separator/>
+                <MenuItem Header="Exit"
+                          Name="exitMenu"/>
+            </MenuItem>
+            <MenuItem Header="Help"
+                      Name="helpMenu"
+                      HorizontalAlignment="Right"/>
+        </Menu>
+        <!-- Main Grid -->
+        <Grid DockPanel.Dock="Bottom">
+            <TabControl>
+                <TabItem Header="test">
+                    <Grid>
+                        <Button Content="test button"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="test 2">
+                    <Grid>
+                        <Button Content="button 2"/>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </DockPanel>
+</Page>

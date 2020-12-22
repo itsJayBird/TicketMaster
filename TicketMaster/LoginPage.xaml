@@ -5,11 +5,14 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TicketMaster"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="400" 
+      d:DesignWidth="500"
+      
       Title="LoginPage"
       ShowsNavigationUI="False"
       Background="White">
     <DockPanel>
+        <!-- menu bar -->
         <Menu x:Name="ToolBar" 
               DockPanel.Dock="Top">
             <Menu.ItemsPanel>
@@ -25,33 +28,53 @@
                           Name="openMenu"/>
                 <Separator/>
                 <MenuItem Header="Exit"
-                          Name="ExitButton"/>
+                          Name="exitMenu"/>
             </MenuItem>
             <MenuItem Header="Help"
-                      Name="helpButton"
+                      Name="helpMenu"
                       HorizontalAlignment="Right"/>
         </Menu>
-        <Grid DockPanel.Dock="Bottom">
+        <!-- Main Grid -->
+        <Grid Background="LightGray">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="RouterScripts"
-                    Content="Router Scripts"
-                    Height="125"
-                    Width="250"
-                    Click="btn_Click"/>
-            <Button x:Name="NewTicket"
-                    Content="New Ticket"
-                    Height="125"
-                    Width="250"
-                    Grid.Column="1"/>
-            <Button x:Name="Help"
-                    Content="Support Guide"
-                    Height="125"
-                    Width="250"
-                    Grid.Column="2"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+          <!--
+            <Grid.Background>
+                <ImageBrush ImageSource="Resources/resLong.png"
+                            Stretch="None"/>
+            </Grid.Background>
+            -->
+          <!-- Center Grid for Login -->
+            <Grid Grid.Row="1"
+                  Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            
+            <!-- copyright -->
+            <TextBlock Text="Resound Networks LLC Ticket Maker Version 0.5"
+                       FontSize="8"
+                       Foreground="WhiteSmoke"
+                       Grid.Column="2"
+                       Grid.Row="2"
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Right"/>
         </Grid>
+        
     </DockPanel>
 </Page>
